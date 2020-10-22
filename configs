@@ -1,6 +1,0 @@
-#!/bin/bash
-SECRET="45925c8ada44f78c8059f337c131b7c1" # use this <head -c 16 /dev/urandom | xxd -ps>
-USER_NM="nobody"  #user name
-L_PORT="-p 8888"     #local port don't forget to write -p
-USR_PORT="443"      #user port
-WORKS="1"         #number of workers
