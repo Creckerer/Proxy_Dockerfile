@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install --fix-missing -y \
 RUN git clone https://github.com/TelegramMessenger/MTProxy
 WORKDIR /MTProxy
 RUN make
+
 FROM ubuntu:${UBUNTU_VERSION}
 RUN apt-get update && apt-get install -y \
     curl \
@@ -16,8 +17,6 @@ RUN apt-get update && apt-get install -y \
     xxd \
     openssl \
  && rm -rf /var/lib/apt/lists/*
-ARG USER_NM="nobody"
-ENV USER_NM="${USER_NM}"
 ARG SECRET="45925c8ada44f78c8059f337c131b7c1"
 ENV SECRET="${SECRET}"
 ARG USR_PORT="443"
