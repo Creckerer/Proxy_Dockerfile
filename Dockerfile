@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install --fix-missing -y \
     build-essential \
     libssl-dev \
     zlib1g-dev
-RUN git clone https://github.com/TelegramMessenger/MTProxy
+COPY ./MTProxy /MTProxy
 WORKDIR /MTProxy
 RUN make
 
